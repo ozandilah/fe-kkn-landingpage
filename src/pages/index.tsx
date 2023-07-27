@@ -3,6 +3,7 @@ import Features from "@/components/Features/Features";
 import Navbars from "@/components/Navbar/Navbar";
 import Villages from "@/components/ProfileVillage/village";
 import Youtube from "@/components/Youtube/Sample";
+import Publik from "@/components/layananPublik/Sample";
 import Head from "next/head";
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
       <Features />
       <Youtube />
       <Blog />
+      <Publik />
     </>
   );
 }
