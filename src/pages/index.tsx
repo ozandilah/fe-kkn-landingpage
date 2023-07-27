@@ -2,6 +2,7 @@ import Blog from "@/components/Blogs/Sample";
 import Features from "@/components/Features/Features";
 import Navbars from "@/components/Navbar/Navbar";
 import Villages from "@/components/ProfileVillage/village";
+import CardStruktur from "@/components/StrukturOrganisasi/Organisasi";
 import Youtube from "@/components/Youtube/Sample";
 import Publik from "@/components/layananPublik/Sample";
 import Head from "next/head";
@@ -15,12 +16,15 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbars />
-      <Villages />
+      <main className="flex flex-col gap-y-20 ">
+        <Navbars />
+      </main>
+
+      {/* <Villages />
       <Features />
       <Youtube />
       <Blog />
-      <Publik />
+      <Publik /> */}
     </>
   );
 }

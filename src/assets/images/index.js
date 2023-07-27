@@ -1,2 +1,3 @@
 import mainBanner from "./mainBanner.png";
-export { mainBanner };
+import ketuaDesa from "./ketua.jpg";
+export { mainBanner, ketuaDesa };
