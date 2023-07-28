@@ -17,7 +17,7 @@ function Villages({}: Props) {
         title="image"
         button={
           <Button state="primary">
-            <a href="">Learn More</a>
+            <a href="/desa">Tentang Desa</a>
           </Button>
         }
       />
