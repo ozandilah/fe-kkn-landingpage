@@ -44,6 +44,7 @@ function SejarahDesa({}: Props) {
             src="/images/desa.jpg"
             width={550}
             height={500}
+            className="object-cover rounded-xl"
             alt="foto desa"
           />
         </div>

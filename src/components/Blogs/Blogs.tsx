@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React, { ReactNode } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -44,37 +45,41 @@ function Blogs({ features }: Props) {
       <Carousel responsive={responsive}>
         {features.map((feature) => {
           return (
-            <div
-              className="bg-soft-yellow p-5 rounded-2xl sm:w-[300px] w-full pl-5 h-full "
-              key={feature.key}
-            >
-              <div className="relative w-full h-[230px] ">
-                <a href="" className="">
-                  {typeof feature.image === "string" ? (
-                    <img
-                      src={feature.image}
-                      alt={feature.title}
-                      className="w-full h-full object-cover rounded-2xl"
-                    />
-                  ) : (
-                    feature.image
-                  )}
+            <>
+              <Link href="/detailblog">
+                <a>
+                  <div
+                    className="bg-soft-yellow p-5 rounded-2xl sm:w-[300px] w-full pl-5 h-full "
+                    key={feature.key}
+                  >
+                    <div className="relative w-full h-[230px] ">
+                      {typeof feature.image === "string" ? (
+                        <img
+                          src={feature.image}
+                          alt={feature.title}
+                          className="w-full h-full object-cover rounded-2xl"
+                        />
+                      ) : (
+                        feature.image
+                      )}
+                    </div>
+
+                    <div className="mt-5">
+                      <h3 className="text-black font-bold text-[24px]">
+                        {feature.title}
+                      </h3>
+                      <div className="mt-2 text-secondary text-[14px]">
+                        {feature.paragraph}
+                      </div>
+                    </div>
+
+                    <div className="mt-4 flex flex-wrap gap-2 text-sm text-gray-600">
+                      {feature.tag}
+                    </div>
+                  </div>
                 </a>
-              </div>
-
-              <div className="mt-5">
-                <h3 className="text-black font-bold text-[24px]">
-                  {feature.title}
-                </h3>
-                <div className="mt-2 text-secondary text-[14px]">
-                  {feature.paragraph}
-                </div>
-              </div>
-
-              <div className="mt-4 flex flex-wrap gap-2 text-sm text-gray-600">
-                {feature.tag}
-              </div>
-            </div>
+              </Link>
+            </>
           );
         })}
       </Carousel>

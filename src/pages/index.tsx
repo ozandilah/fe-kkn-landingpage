@@ -1,5 +1,7 @@
 import Blog from "@/components/Blogs/Sample";
+import FloatButton from "@/components/ButtonFloat/FloatButton";
 import Features from "@/components/Features/Features";
+import FooterPage from "@/components/Footer/FooterPage";
 import Navbars from "@/components/Navbar/Navbar";
 import Villages from "@/components/ProfileVillage/village";
 import CardStruktur from "@/components/StrukturOrganisasi/Organisasi";
@@ -20,13 +22,14 @@ export default function Home() {
       <main className="flex flex-col">
         <Navbars />
         <Villages />
+        <Features />
+        <StrukturDesa />
+        <Blog />
+        <Youtube />
+        <Publik />
+        <FloatButton />
+        <FooterPage />
       </main>
-      {/* <StrukturDesa /> */}
-      {/*
-      <Features />
-      <Youtube />
-      <Blog />
-      <Publik /> */}
     </>
   );
 }
