@@ -1,7 +1,6 @@
-import React from "react";
-
 import SectionDua from "designsystem/dist/moleculs/Section-2";
 import Button from "designsystem/dist/atom/Button";
+import Link from "next/link";
 type Props = {};
 
 function Villages({}: Props) {
@@ -16,9 +15,11 @@ function Villages({}: Props) {
         image="/images/sectionDua.png"
         title="image"
         button={
-          <Button state="primary">
-            <a href="/desa">Tentang Desa</a>
-          </Button>
+          <Link href="/desa">
+            <Button state="primary">
+              <a>Tentang Desa</a>
+            </Button>
+          </Link>
         }
       />
     </div>
