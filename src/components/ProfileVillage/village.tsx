@@ -15,11 +15,11 @@ function Villages({}: Props) {
         image="/images/sectionDua.png"
         title="image"
         button={
-          <Link href="/desa">
-            <Button state="primary">
+          <Button className="relative px-8" state="primary">
+            <Link href="/desa">
               <a>Tentang Desa</a>
-            </Button>
-          </Link>
+            </Link>
+          </Button>
         }
       />
     </div>
