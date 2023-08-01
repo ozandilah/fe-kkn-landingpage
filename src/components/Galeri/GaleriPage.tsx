@@ -6,18 +6,16 @@ interface Galeries {
 export default function GaleriPage(props: Galeries) {
   const { image } = props;
   return (
-    <div>
-      <div className="grid gap-4">
-        <div>
-          <Image
-            className="h-auto max-w-full rounded-lg"
-            src={`${image}`}
-            alt="Image"
-            width={150}
-            height={150}
-          />
-        </div>
+    <section className="container mx-auto py-8">
+      <div className="w-[250px] h-[250px] ">
+        <Image
+          className="thumbnail w-full h-full object-cover rounded-2xl"
+          src={`${image}`}
+          alt="Image"
+          width={205}
+          height={250}
+        />
       </div>
-    </div>
+    </section>
   );
 }

@@ -7,12 +7,13 @@ type Props = {};
 function FooterPage({}: Props) {
   return (
     <div>
-      <footer className="bg-gray-500 text-center text-white">
+      <footer className="bg-orange text-center text-white">
         <div className="container px-6 pt-6 mx-auto">
           <div className="relative">
             <h1>Kontak Kami</h1>
             <p className="">
-              Jl. Raya Tagog No. 128 Padalarang, Kode Pos 40553
+              Desa Bandung, Wonosegoro Kabupaten Boyolali Provinsi Jawa Tengah
+              57382
             </p>
             <h2 className="mx-auto">
               <IoCall
@@ -20,19 +21,19 @@ function FooterPage({}: Props) {
                 className="mx-auto text-white inline-flex mr-2"
                 size={18}
               />
-              022-6623181
+              +62 85159555343
             </h2>
             <h2 className="mx-auto">
               <AiOutlineMail
                 className="mx-auto text-white inline-flex mr-2"
                 size={18}
               />
-              pemdes@desabandungbanyuwangi.web.id
+              desabandung-boyolali.gmail.com
             </h2>
           </div>
           <div className=" flex justify-center items-center mt-5">
             <a
-              href="#!"
+              href=""
               type="button"
               className="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
               data-te-ripple-init
@@ -140,7 +141,7 @@ function FooterPage({}: Props) {
         </div>
 
         <div className="p-4 text-center bg-(rgba(0, 0, 0, 0.2))">
-          © Copyright Desa Bandung Banyuwangi. All Rights Reserved
+          © Copyright Desa Bandung Boyolali. All Rights Reserved
         </div>
       </footer>
     </div>

@@ -6,20 +6,17 @@ type Props = {
   image: string | ReactNode;
   preimage?: string;
   subTitle: string;
+  className: string;
 };
 
-function CardStruktur({ title, image, preimage, subTitle }: Props) {
+function CardStruktur({ title, image, preimage, subTitle, className }: Props) {
   return (
     <div className="">
       <div className="container max-w-7xl mx-auto px-4 cursor-auto">
         <div className="flex flex-wrap">
           <div className="px-6">
             {typeof image === "string" ? (
-              <img
-                src={image}
-                alt={preimage}
-                className="rounded-xl shadow-lg max-w-full h-auto align-middle border-none undefined"
-              />
+              <img src={image} alt={preimage} className={className} />
             ) : (
               image
             )}

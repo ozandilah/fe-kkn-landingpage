@@ -8,24 +8,31 @@ type Props = {};
 function StrukturDesa({}: Props) {
   return (
     <>
+      <div className="flex flex-col justify-center items-center ">
+        <h3 className="text-center text-[#FFDE32] uppercase font-bold text-4xl">
+          Struktur Organisasi
+        </h3>
+      </div>
       <div className="my-20 flex flex-wrap justify-center gap-x-6 gap-y-6">
         <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
           <CardStruktur
-            title="Halo Dok"
-            subTitle="Ketua"
-            image="/images/Sugiyanto(Ketua).JPG"
+            title="Rahmat Handoyo"
+            subTitle="Kades Bandung"
+            image="/images/rahmat.jpg"
+            className="rounded-xl shadow-lg align-middle border-none undefined  h-[300px] w-[300px]"
           />
         </div>
         <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
           <CardStruktur
-            title="Halo Dok"
-            subTitle="Wakil Ketua"
-            image="/images/Sugiyanto(Ketua).JPG"
+            title="Sarjono"
+            subTitle="Kepala Dusun Bandung"
+            image="/images/sarjono.jpg"
+            className="rounded-xl shadow-lg align-middle border-none undefined  h-[300px] w-[300px]"
           />
         </div>
         <div className="w-full flex justify-center">
           <Button className="relative px-8" state="primary">
-            <Link href="/strukturpage">
+            <Link href="/strukturdesa">
               <a>Lebih Banyak</a>
             </Link>
           </Button>

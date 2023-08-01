@@ -3,10 +3,13 @@ import NavPage from "@/components/NavPage/NavPage";
 import Button from "designsystem/dist/atom/Button";
 import Head from "next/head";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 type Props = {};
 
 function detailBlog({}: Props) {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const { pathname } = useRouter();
   return (
     <>
       <Head>
@@ -17,33 +20,32 @@ function detailBlog({}: Props) {
       </Head>
       <main className="flex flex-col ">
         <NavPage
+          className={{
+            active: "text-yellow",
+            idle: "text-black",
+          }}
           cta={
             <>
-              <Button state="primary" className="relative px-8">
-                <a>Sign In</a>
+              <Button className="relative px-8" state="primary">
+                <Link href="https://app.desabandung-boyolali.web.id">
+                  <a>Masuk</a>
+                </Link>
               </Button>
             </>
           }
-          pathname="/home"
-          className={{ active: "text-yellow", idle: "text-black" }}
+          pathname={pathname}
         >
-          <Link href="/home">
+          <Link href="/">
             <a>Home</a>
           </Link>
-
           <Link href="/desa">
             <a>Desa</a>
           </Link>
-
           <Link href="/potensidesa">
             <a>Potensi Desa</a>
           </Link>
-
-          <Link href="/pemerintahan">
-            <a>Pemerintahan</a>
-          </Link>
-          <Link href="/kegiatan">
-            <a>Kegiatan</a>
+          <Link href="/strukturdesa">
+            <a>Struktur Desa</a>
           </Link>
         </NavPage>
         <SampleDetailBlog />

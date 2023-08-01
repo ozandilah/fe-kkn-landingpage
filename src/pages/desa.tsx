@@ -4,11 +4,13 @@ import Button from "designsystem/dist/atom/Button";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 
 type Props = {};
 
 function Desa({}: Props) {
+  const { pathname } = useRouter();
   return (
     <>
       <Head>
@@ -19,33 +21,32 @@ function Desa({}: Props) {
       </Head>
       <main className="flex flex-col ">
         <NavPage
+          className={{
+            active: "text-yellow",
+            idle: "text-black",
+          }}
           cta={
             <>
-              <Button state="primary" className="relative px-8">
-                <a>Sign In</a>
+              <Button className="relative px-8" state="primary">
+                <Link href="https://app.desabandung-boyolali.web.id">
+                  <a>Masuk</a>
+                </Link>
               </Button>
             </>
           }
-          pathname="/home"
-          className={{ active: "text-yellow", idle: "text-black" }}
+          pathname={pathname}
         >
-          <Link href="/home">
+          <Link href="/">
             <a>Home</a>
           </Link>
-
           <Link href="/desa">
             <a>Desa</a>
           </Link>
-
           <Link href="/potensidesa">
             <a>Potensi Desa</a>
           </Link>
-
-          <Link href="/pemerintahan">
-            <a>Pemerintahan</a>
-          </Link>
-          <Link href="/kegiatan">
-            <a>Kegiatan</a>
+          <Link href="/strukturdesa">
+            <a>Struktur Desa</a>
           </Link>
         </NavPage>
         <section className="container mx-auto px-16 ">

@@ -40,7 +40,7 @@ export default function Blog() {
   }, []);
 
   return (
-    <section className="md:px-10 md:mx-32  flex flex-col">
+    <section className="md:px-10 md:mx-32  flex flex-col my-10">
       <div className="flex flex-col justify-center items-center">
         <h2 className="text-yellow font-bold text-[30px]">KEGIATAN</h2>
       </div>

@@ -17,7 +17,7 @@ function Navbars({}: Props) {
       cta={
         <>
           <Button className="relative px-8" state="primary">
-            <Link href="/">
+            <Link href="https://app.desabandung-boyolali.web.id">
               <a>Masuk</a>
             </Link>
           </Button>
@@ -33,14 +33,11 @@ function Navbars({}: Props) {
       <Link href="/desa">
         <a>Desa</a>
       </Link>
-      <Link href="/pemerintah">
-        <a>Pemerintahan</a>
+      <Link href="/potensidesa">
+        <a>Potensi Desa</a>
       </Link>
-      <Link href="/kegiatan">
-        <a>Kegiatan</a>
-      </Link>
-      <Link href="/gallery">
-        <a>Galeri</a>
+      <Link href="/strukturdesa">
+        <a>Struktur Desa</a>
       </Link>
     </Navbar>
   );

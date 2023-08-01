@@ -1,9 +1,6 @@
-import Blogs from "@/components/Blogs/Blogs";
 import FloatButton from "@/components/ButtonFloat/FloatButton";
 import Features from "@/components/Features/Features";
 import FooterPage from "@/components/Footer/FooterPage";
-import Galeri, { EmblaCarousel } from "@/components/Galeri/GaleriPage";
-import GaleriSample from "@/components/Galeri/Sample";
 import Navbars from "@/components/Navbar/Navbar";
 import Villages from "@/components/ProfileVillage/village";
 import StrukturDesa from "@/components/StrukturOrganisasi/Sample";
@@ -11,11 +8,7 @@ import Youtube from "@/components/Youtube/Sample";
 import Publik from "@/components/layananPublik/Sample";
 import Head from "next/head";
 
-import axios from "axios";
-
-import { BlogItemTypes } from "@/services/data-types";
 import Blog from "@/components/Blogs";
-import { getData } from "@/utils/fetchData";
 import Galeries from "@/components/Galeri";
 
 export default function Home() {
@@ -29,17 +22,24 @@ export default function Home() {
       </Head>
       <main className="flex flex-col">
         <Navbars />
-        <Galeries />
-        {/* <Blog /> */}
-
-        {/* <Villages />
+        <Villages />
         <Features />
         <StrukturDesa />
-
         <Youtube />
+        <Blog />
+        <Galeries />
         <Publik />
         <FloatButton />
-        <FooterPage /> */}
+        <FooterPage />
+
+        {/*
+
+
+
+
+
+
+        */}
       </main>
     </>
   );

@@ -26,7 +26,7 @@ export default function Blogs(props: Blogs) {
     <section className="container mx-auto px-4 py-8 ">
       <Link href={`/detail-blog/${id}`}>
         <a>
-          <div className="bg-soft-yellow p-5 rounded-2xl sm:w-[300px] w-full pl-5 h-full">
+          <div className="bg-soft-yellow p-5 rounded-2xl sm:w-[300px] w-[full] pl-5 h-full">
             <div className="relative w-full h-[230px] ">
               <Image
                 className="thumbnail w-full h-full object-cover rounded-2xl"

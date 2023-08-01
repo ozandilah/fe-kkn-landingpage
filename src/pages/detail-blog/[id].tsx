@@ -5,43 +5,42 @@ import Button from "designsystem/dist/atom/Button";
 import { GetStaticProps } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 interface DetailProps {
   dataItem: BlogItemTypes;
 }
 export default function DetailBlog({ dataItem }: DetailProps) {
+  const { pathname } = useRouter();
   return (
     <>
       <NavPage
+        className={{
+          active: "text-yellow",
+          idle: "text-black",
+        }}
         cta={
           <>
             <Button className="relative px-8" state="primary">
-              <Link href="/">
+              <Link href="https://app.desabandung-boyolali.web.id">
                 <a>Masuk</a>
               </Link>
             </Button>
           </>
         }
-        pathname="/home"
-        className={{ active: "text-yellow", idle: "text-black" }}
+        pathname={pathname}
       >
-        <Link href="/home">
+        <Link href="/">
           <a>Home</a>
         </Link>
-
         <Link href="/desa">
           <a>Desa</a>
         </Link>
-
         <Link href="/potensidesa">
           <a>Potensi Desa</a>
         </Link>
-
-        <Link href="/pemerintahan">
-          <a>Pemerintahan</a>
-        </Link>
-        <Link href="/kegiatan">
-          <a>Kegiatan</a>
+        <Link href="/strukturdesa">
+          <a>Struktur Desa</a>
         </Link>
       </NavPage>
       <div className="relative">

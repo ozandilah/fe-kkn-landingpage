@@ -18,7 +18,7 @@ function Item({ handleClick, isSomeActive, turn, setTurn, data }: Props) {
   return (
     <>
       <div className="flex flex-col  lg:mt-7 w-full my-5 px-4">
-        <h2 className="text-yellow font-bold text-[22px] lg:text-[32px] md:text-[32px] xl:text-[32px] mb-10 px-5">
+        <h2 className="text-yellow font-bold text-[22px] lg:text-[30px] md:text-[30px] xl:text-[30px] mb-10 px-8">
           Informasi dan Layanan Publik
         </h2>
 
