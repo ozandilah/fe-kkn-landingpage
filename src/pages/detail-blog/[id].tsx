@@ -2,7 +2,6 @@ import NavPage from "@/components/NavPage/NavPage";
 import { BlogItemTypes } from "@/services/data-types";
 import { getBlogs, getDetailBlogs } from "@/services/user";
 import Button from "designsystem/dist/atom/Button";
-import { GetStaticProps } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -64,7 +63,7 @@ export default function DetailBlog({ dataItem }: DetailProps) {
             <div className="relative max-w-[90%]">
               <div className="relative max-w-full rounded-[59px] overflow-hidden">
                 <Image
-                  src={`${process.env.NEXT_PUBLIC_API}/${dataItem.image.name}`}
+                  src={`${process.env.NEXT_PUBLIC_API}/${dataItem.image["name"]}`}
                   alt="image1"
                   width={800}
                   height={800}

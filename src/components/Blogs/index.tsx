@@ -33,35 +33,41 @@ export default function Blog() {
   const getBlogList = useCallback(async () => {
     const data = (await getBlogs()).data;
     setBlogList(data);
-  }, [getBlogs]);
+  }, []);
 
   useEffect(() => {
     getBlogList();
-  }, []);
+  }, [getBlogList]);
 
   return (
-    <section className="md:px-10 md:mx-32  flex flex-col my-10">
+    <section
+      className="md:px-10 md:mx-32  flex flex-col my-10"
+      data-aos="zoom-out-right"
+      data-aos-duration="2000"
+    >
       <div className="flex flex-col justify-center items-center">
         <h2 className="text-yellow font-bold text-[30px]">KEGIATAN</h2>
       </div>
       <Carousel responsive={responsive}>
-        {blogList.map((item: BlogItemTypes) => (
-          <Blogs
-            key={item._id}
-            title={item.title}
-            subTitle={item.subTitle}
-            Keterangan={item.Keterangan}
-            date={formatDate(item.date)}
-            image={
-              Array.isArray(item.image)
-                ? item.image.map(
-                    (img) => `${process.env.NEXT_PUBLIC_API}/${img}`
-                  )
-                : `${process.env.NEXT_PUBLIC_API}/${item.image.name}`
-            }
-            id={item._id}
-          />
-        ))}
+        {blogList.map((item: BlogItemTypes) => {
+          return (
+            <Blogs
+              key={item._id}
+              title={item.title}
+              subTitle={item.subTitle}
+              Keterangan={item.Keterangan}
+              date={formatDate(item.date)}
+              image={
+                Array.isArray(item.image)
+                  ? item.image.map(
+                      (img) => `${process.env.NEXT_PUBLIC_API}/${img}`
+                    )
+                  : `${process.env.NEXT_PUBLIC_API}/${item.image["name"]}`
+              }
+              id={item._id}
+            />
+          );
+        })}
       </Carousel>
     </section>
   );

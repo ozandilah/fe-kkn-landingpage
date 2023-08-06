@@ -6,9 +6,9 @@ export interface BlogItemTypes {
   subTitle: string;
   Keterangan: string;
   date: string;
-  image: string | ReactNode;
+  image: string[] | ReactNode[] | any;
 }
 export interface GaleriItemTypes {
   _id: string;
-  image: string | ReactNode;
+  image: string[] | ReactNode[];
 }

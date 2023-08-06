@@ -24,7 +24,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/components/Blogs/Blogs.tsx"
+    "src/components/Blogs/Blogs.tsx",
+    "src/components/Accordions/Accordion.jsx"
   ],
   "exclude": ["node_modules"]
 }

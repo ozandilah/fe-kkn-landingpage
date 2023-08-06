@@ -16,10 +16,17 @@ export default function Galeries() {
   }, []);
   return (
     <>
-      <div className="flex flex-col justify-center items-start px-36 my-10">
+      <div
+        className="flex flex-col justify-center items-start px-36 my-10"
+        id="galeri"
+      >
         <h2 className="text-yellow font-bold text-[30px]">Galeri</h2>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mx-auto">
+      <div
+        className="grid grid-cols-1 md:grid-cols-4 gap-8 mx-auto"
+        data-aos="zoom-in"
+        data-aos-duration="3000"
+      >
         {galeriList.map((item: GaleriItemTypes) => (
           <GaleriPage
             key={item._id}
@@ -28,7 +35,7 @@ export default function Galeries() {
                 ? item.image.map(
                     (img) => `${process.env.NEXT_PUBLIC_API}/${img}`
                   )
-                : `${process.env.NEXT_PUBLIC_API}/${item.image.name}`
+                : `${process.env.NEXT_PUBLIC_API}/${item.image["name"]}`
             }
           />
         ))}

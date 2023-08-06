@@ -1,11 +1,16 @@
 import SectionDua from "designsystem/dist/moleculs/Section-2";
 import Button from "designsystem/dist/atom/Button";
 import Link from "next/link";
-type Props = {};
+import { Router, useRouter } from "next/router";
 
-function Villages({}: Props) {
+export default function Villages() {
+  const router = useRouter();
   return (
-    <div className="my-20 gap-y-28 flex flex-col">
+    <div
+      className="my-20 gap-y-28 flex flex-col "
+      data-aos="zoom-in"
+      data-aos-duration="3000"
+    >
       <SectionDua
         content={{
           preheading: "Profil Desa",
@@ -15,15 +20,14 @@ function Villages({}: Props) {
         image="/images/sectionDua.png"
         title="image"
         button={
-          <Button className="relative px-8" state="primary">
-            <Link href="/desa">
-              <a>Tentang Desa</a>
-            </Link>
-          </Button>
+          <button
+            className="relative px-8 bg-orange rounded-full py-3 text-white"
+            onClick={() => router.push("/desa")}
+          >
+            Tentang Desa
+          </button>
         }
       />
     </div>
   );
 }
-
-export default Villages;

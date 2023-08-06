@@ -1,37 +1,63 @@
 import Link from "next/link";
 import React from "react";
 import FeaturedMenuDua from "designsystem/dist/moleculs/FeaturedMenudua";
+import { useRouter } from "next/router";
 type Props = {};
 
 function Features({}: Props) {
+  const router = useRouter();
   return (
-    <div className="my-20 flex flex-wrap justify-center gap-x-6 gap-y-6">
-      <div className="my-2">
+    <div className="my-20 flex flex-wrap justify-center gap-x-6 gap-y-6 ">
+      <div className="my-2" data-aos="fade-right" data-aos-duration="1000">
         <FeaturedMenuDua
-          title="Layanan Publik"
           image="/images/publik.jpg"
-          preimage="image-1"
+          button={
+            <button
+              className="text-black"
+              onClick={() => router.push("#publik")}
+            >
+              Layanan Publik
+            </button>
+          }
         />
       </div>
-      <div className="my-2">
+      <div className="my-2" data-aos="fade-right" data-aos-duration="1000">
         <FeaturedMenuDua
-          title="Potensi Desa"
           image="/images/desa.jpg"
-          preimage="image-2"
+          button={
+            <button
+              className="text-black"
+              onClick={() => router.push("/potensidesa")}
+            >
+              Potensi Desa
+            </button>
+          }
         />
       </div>
-      <div className="my-2">
+      <div className="my-2" data-aos="fade-left" data-aos-duration="1000">
         <FeaturedMenuDua
-          title="Pemerintahan"
           image="/images/goverment.jpg"
-          preimage="image-3"
+          button={
+            <button
+              className="text-black"
+              onClick={() => router.push("/strukturdesa")}
+            >
+              Pemerintahan
+            </button>
+          }
         />
       </div>
-      <div className="my-2">
+      <div className="my-2" data-aos="fade-left" data-aos-duration="1000">
         <FeaturedMenuDua
-          title="Galeri"
           image="/images/galeri.jpg"
-          preimage="image-4"
+          button={
+            <button
+              className="text-black"
+              onClick={() => router.push("#galeri")}
+            >
+              Galeri
+            </button>
+          }
         />
       </div>
     </div>
